@@ -1,0 +1,147 @@
+
+\documentclass[11.9pt,a4paper,roman]{moderncv}       
+\moderncvstyle{banking}                            
+\moderncvcolor{black}                                
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+
+% adjust the page margins
+\usepackage[scale=0.9]{geometry}
+\usepackage{multicol}
+
+\usepackage{import}
+
+% personal data
+\name{Nathan}{Gervasoni}
+\newcommand*{\customcventry}[7][.10em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.10em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{9pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-16mm}
+
+\begin{center}
+
+\begin{tabular}{ c c }
+ \hspace{3.8mm}
+ \faLinkedin \enspace \urlstyle{same}\href{https://www.linkedin.com/in/nathan-gervasoni/}{https://www.linkedin.com/in/nathan-gervasoni/}
+\end{tabular}
+
+\begin{tabular}{ c c }
+\faGithub\enspace \urlstyle{same}\href{https://github.nathangervasoni.dev}{https://github.nathangervasoni.dev}
+\end{tabular}
+\end{center}
+\vspace{-1mm}
+
+\section{EDUCATION}
+{\customcventry{Expected Graduation: June 2022}{BA in Computer Science: Cyber-Security Major}{University of Newcastle}{Newcastle, NSW}{}{}}
+{\customcventry{Graduated: October 2018}{BA in Criminology}{University of New England}{Armidale, NSW}{}{}}
+\vspace{-3mm}
+
+\section{EXPERIENCE}
+
+{\customcventry{March 2020 - Present}{ISMS Coordinator/Level 1 Support}{DevFU}{Newcastle, NSW}{}
+{\begin{itemize}
+  \item {Information Security Management System Coordinator: Transitioned into an ISMS Coordinator role for DevFU, during this time I have conducted hardware audits and developed multiple documents such as a secure development policy.}
+  \item{Ran ISO/IEC:27001 training events and consulted with clients relating to ISMS.}
+    \item {Participated in bug fixes and deployment updates which involved MySQL and C\#. Provided basic support which included contacting/responding to client requests.}
+    \item{Helped develop template changes using the extensible template engine Jinja, for a demo site which was later used in production.}
+\end{itemize}
+}
+}
+{\customcventry{March 2019 - March 2020}{Software Engineer Intern}{DevFU}{Newcastle, NSW}{}
+{\begin{itemize}
+  \item {Received exposure to multiple projects including a document control and shift planning system. These projects were my first glimpse into full-stack development and allowed me to dive head first into a commercial software environment.} 
+  \item{This opportunity enabled me to directly develop my problem solving and soft-skills, such as working efficiently within a team.}
+\end{itemize}
+}
+}
+
+\vspace{-2mm}
+\section{PROJECTS}
+
+{\customcvproject{Machine Learning}{}
+{\begin{itemize}
+\item Developing a strong interest in exploring the intersection of Machine Learning and Cyber Security. 
+  \item Frequently enjoy cloning and implementing open source Machine Learning models such as creating artworks using GAN's. Additionally I have interacted with Open AI's GPT-2 and have implemented both PyTorch and Tensorflow tutorials for android/machine learning apps.
+  \item Limited experience in the Hedgefund Numerai's open trading tournament which involves training a model to predict future stock prices. I'm currently learning Machine Learning via the MIT 6.S191 course in my spare time.
+\end{itemize}
+}
+}
+\vspace{1mm}
+{\customcvproject{Mobile App Development}{}
+  {\begin{itemize}
+    \item Experience with mobile app development including creating 'Hello There', which was made using Kotlin in Android Studio. Users select and hear quotes from Star Wars characters such as Obi Wan and Palpatine. Quotes include "Hello There!", and "Do it!". The project was entirely for fun and to accomplish seeing my developer name 'University Fund' on the Google Play Store.
+    \item Experimented with alternate frameworks such as Flutter and Angular for creating mobile apps. Experience with Jetpack Compose UI framework.
+  \end{itemize}
+  }
+}
+\vspace{1mm}
+{\customcvproject{Personal Website/Blog}{}
+{\begin{itemize}
+  \item Developing a website using Angular and Firestore, which is then hosted on Firebase. This will enable me to illustrate current and past projects, to blog about tech related software/hardware, and to upload educational videos to help others learn and to reinforce my understanding. 
+  \item Recently awarded access to OpenAI's GPT-3 API beta, which I plan to incorporate onto my website.  
+\end{itemize}
+}
+}
+
+\vspace{-2mm}
+\section{ADDITIONAL}
+\begin{minipage}{\maincolumnwidth}%
+	\small{
+    	\begin{itemize}
+          \item Relevant University Courses: Data Structures, Algorithms, System Network Security, System Network Admin, Databases, Data Security, Discrete Mathematics, System Design and Analysis. 
+          \item Programming Language experience: Python, Kotlin, Java, C++, TypeScript, MySQL, HTML/CSS. 
+          \item Limited experience with Blockchain development on Algorand and Ethereum.  
+          \item Member of the Newwwie Tech Slack group.  
+		\end{itemize}}%
+\end{minipage}%
+\end{document}
+
